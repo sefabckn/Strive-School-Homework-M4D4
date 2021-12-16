@@ -18,6 +18,7 @@ function App() {
       <MyBadge text={'Successfully'} color={'danger'} />
       <SingleBook book={items[0]}/>
       <BookList books = {items}/>
+      <CommentArea />
     </div> 
     
   );
