@@ -1,6 +1,7 @@
 import { Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import { Component } from 'react'
+import CommentArea from './CommentArea '
 class SingleBook extends Component{
     state= {
         selected: false
@@ -16,15 +17,22 @@ class SingleBook extends Component{
                             onClick={()=> {this.setState({selected:!this.state.selected})}}//contolling state with each click. On second click value will change. true/false => false/true 
                             style={{border:`2px solid ${this.state.selected?"red":"white"}`}}
                             />
-                            <Card.Body>
+                            <Card.Body
+                            >
                                 <Card.Title>{this.props.book.category}</Card.Title>
                                 <Card.Text>
                                 {this.props.book.title}
                                 </Card.Text>
                             </Card.Body>
                         </Card>        
-                   
                     }</Row>
+                    <Row>
+                        <>
+                            {
+                                this.state.selected && <CommentArea />
+                            }
+                        </>
+                    </Row>
             </Container>
         )
     }

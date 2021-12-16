@@ -7,6 +7,7 @@ import MyBadge from './components/MyBadge';
 import items from './scifi.json'
 import SingleBook from './components/SingleBook';
 import BookList from './components/BookList';
+import CommentArea from './components/CommentArea ';
 
 function App() {
   return (
