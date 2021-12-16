@@ -9,6 +9,7 @@ class SingleBook extends Component{
     render(){
         return(
             <Container>
+                
                 <Row>{
                         <Card style={{ width: '12rem' }}>
                             <Card.Img 
@@ -29,7 +30,7 @@ class SingleBook extends Component{
                     <Row>
                         <>
                             {
-                                this.state.selected && <CommentArea />
+                                this.state.selected && <CommentArea asin={this.props.book.asin} />
                             }
                         </>
                     </Row>

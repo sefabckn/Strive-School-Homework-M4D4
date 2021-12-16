@@ -1,15 +1,12 @@
 import { ListGroup } from "react-bootstrap"
-const CommentList = ({comments})=>{
-
-    <>
-        <ListGroup>
-            <ListGroup.Item>{comments.comment}</ListGroup.Item>
+import SingleComment from "./SingleComment"
+const CommentList = ({commentDisplay})=>{
+    return(
+        <ListGroup>{
+            commentDisplay.map( comment => (
+                <SingleComment comment={comment} /*key={comment.asin}*/ />
+            ))} 
         </ListGroup>
-    
-    
-    
-    </>
+    )   
 }
-
-
 export default CommentList
